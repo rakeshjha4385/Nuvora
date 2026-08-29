@@ -10,9 +10,9 @@ const cartItems = [
 
 export default function CartPage() {
   const subtotalCents = cartItems.reduce((sum, item) => sum + item.priceCents * item.quantity, 0);
-  const totalLabel = new Intl.NumberFormat('en-US', {
+  const totalLabel = new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'INR',
   }).format(subtotalCents / 100);
 
   return (
@@ -25,7 +25,7 @@ export default function CartPage() {
             <li key={item.name} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0' }}>
               <span>{item.name}</span>
               <span>
-                {item.quantity} × ${item.priceCents / 100}
+                {item.quantity} × ₹{(item.priceCents / 100).toLocaleString('en-IN')}
               </span>
             </li>
           ))}
