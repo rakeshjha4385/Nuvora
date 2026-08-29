@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "outDir": "dist",
+    "rootDir": "src",
+    "paths": {
+      "@nuvora/config": ["../../packages/config/src/index.ts"],
+      "@nuvora/types": ["../../packages/types/src/index.ts"],
+      "@nuvora/observability": ["../../packages/observability/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
