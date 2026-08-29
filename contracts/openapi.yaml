@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: Nuvora API
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Service healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  service:
+                    type: string
+                  environment:
+                    type: string
+  /api/v1/products:
+    get:
+      summary: List products
+      responses:
+        '200':
+          description: A product list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProductSummary'
+components:
+  schemas:
+    ProductSummary:
+      type: object
+      required:
+        - id
+        - name
+        - slug
+        - priceCents
+        - currency
+        - inStock
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        slug:
+          type: string
+        priceCents:
+          type: integer
+        currency:
+          type: string
+        inStock:
+          type: boolean
