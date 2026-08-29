@@ -4,19 +4,19 @@ const featuredProducts = [
   {
     name: 'Everyday Essential',
     description: 'Premium essentials, built for everyday rituals.',
-    price: '$49',
+    price: '₹4,900',
     accent: 'Best seller',
   },
   {
     name: 'Recovery Ritual',
     description: 'Thoughtful wellness products with a premium, restorative feel.',
-    price: '$68',
+    price: '₹6,800',
     accent: 'New',
   },
   {
     name: 'Travel Set',
     description: 'A curated starter kit designed for elevated routines on the go.',
-    price: '$84',
+    price: '₹8,400',
     accent: 'Limited',
   },
 ];

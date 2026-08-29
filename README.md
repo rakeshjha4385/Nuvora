@@ -10,9 +10,68 @@ This repository establishes:
 - a clear path to implementing the storefront, catalog, checkout, payments, inventory, and admin features in later phases
 
 ## Current State
-This repository currently contains the initial specification and architecture foundation. Application functionality is intentionally not implemented yet.
+This repository contains the product and architecture foundation for the Nuvora storefront, including the initial website experience and checkout flow implementation. It is designed for local development and iteration in a VS Code workspace.
+
+## GitHub Repository
+Replace the placeholder below with the actual GitHub repo URL shared with your cofounders:
+- GitHub Repo: https://github.com/<YOUR_ORG_OR_USERNAME>/<YOUR_REPO_NAME>
+
+## Local Setup for Co-founders
+Follow these steps in VS Code on each contributor machine.
+
+### 1) Prerequisites
+Install the following tools before opening the project:
+- Node.js 22 LTS or newer
+- pnpm 9.x
+- Git
+- VS Code
+
+### 2) Clone the repository
+```bash
+git clone <PASTE_GITHUB_REPO_URL_HERE>
+cd Nuvora
+```
+
+### 3) Install dependencies
+From the repo root:
+```bash
+corepack enable
+corepack prepare pnpm@9.12.0 --activate
+pnpm install
+```
+
+If pnpm is not recognized after that, restart the terminal or run:
+```bash
+export PATH="$HOME/.local/share/pnpm:$PATH"
+```
+
+### 4) Run the app locally
+From the project root:
+```bash
+pnpm dev
+```
+
+This starts the app in development mode. The storefront usually runs at:
+- Web app: http://localhost:3000
+
+### 5) Useful commands
+```bash
+pnpm install
+pnpm typecheck
+pnpm test
+pnpm build
+```
+
+### 6) Open in VS Code
+- Open the cloned folder in VS Code
+- Open a new integrated terminal
+- Run the commands above from the repository root
+- If dependencies fail to resolve, run `pnpm install` again after confirming Node and pnpm versions
 
 ## Core Directories
+- apps/web/ — Next.js storefront frontend
+- apps/api/ — TypeScript API and checkout logic
+- packages/ — shared packages and types
 - specs/ — business and product requirements
 - adr/ — architecture decision records
 - docs/ — supporting project documentation

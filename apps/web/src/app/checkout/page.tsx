@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function CheckoutPage() {
   const subtotalCents = 9800;
-  const totalLabel = new Intl.NumberFormat('en-US', {
+  const totalLabel = new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'INR',
   }).format(subtotalCents / 100);
 
   return (

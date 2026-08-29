@@ -9,6 +9,6 @@ describe('cart page', () => {
 
     expect(screen.getByText('Your cart')).toBeTruthy();
     expect(screen.getByText('Everyday Essential')).toBeTruthy();
-    expect(screen.getByText('Total: $98.00')).toBeTruthy();
+    expect(screen.getByText('Total: ₹9,800.00')).toBeTruthy();
   });
 });
